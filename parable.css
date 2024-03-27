@@ -17,36 +17,3 @@ h4 strong {
         font-size: 1.8em !important;
     }
 }
-
-
-/*P3 Bold (Border)*/
-.sqsrte-small strong{
-font-weight:400!important;
-letter-spacing:.01em;
-padding:6px 10px;
-border: 1px solid currentColor;
-background:var(--clear)!important;
-border-radius:100px;}
-
-/*P3 Italic (Small Uppercase)*/
-.sqsrte-small em{
-font-size:.85em;
-letter-spacing:.085em;
-text-transform:uppercase;
-font-style:normal;}
-
-/*P1 Bold*/
-.sqsrte-large strong{
-font-size:22px!important;
-font-weight:500!important;
-line-height:1.4em;
-letter-spacing:var(--sm-ls)!important;}
-
-/*P1 Bold Italic*/
-.sqsrte-large strong em{
-font-family:var(--heading);
-font-style:normal!important;
-font-size:30px!important;
-font-weight:500!important;
-line-height:1.5em;
-letter-spacing:var(--sm-ls)!important;}
