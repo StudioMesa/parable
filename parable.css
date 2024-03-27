@@ -3,6 +3,7 @@ h1 strong,
 h2 strong, 
 h3 strong, 
 h4 strong {
+    color:red!important;
     font-weight: 500 !important;
     line-height: 1 !important;
     font-size: 2em !important;
@@ -14,6 +15,7 @@ h4 strong {
     h2 strong, 
     h3 strong, 
     h4 strong {
+        color:red!important;
         font-size: 1.8em !important;
     }
 }
