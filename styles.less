@@ -1,11 +1,36 @@
 //---SITE-WIDE VARIABLES---//   
 @fe-block-height:25.8px;
 
+/*Borders*/
+html{
+--c-border:1px solid currentColor;
+--w-border: 1px solid var(--white);
+--l-border: 1px solid var(--light);
+--a-border: 1px solid var(--accent);
+--d-border: 1px solid var(--dark);
+--b-border: 1px solid var(--black);
+--clear:transparent;
+--trans: all .3s ease;
+-webkit-animation: var(--site-load-time) ease 0s normal forwards 1 fadein;
+animation: var(--site-load-time) ease 0s normal forwards 1 fadein;}
+/*Fade In*/
+@keyframes fadein{
+0% {opacity:0;}
+66% {opacity:0;}
+100% {opacity:1;}}
+@-webkit-keyframes fadein{
+0% {opacity:0;}
+66% {opacity:0;}
+100% {opacity:1;}}}
+
+
+
+
 /*MEGA*/
 h1 strong, h2 strong, h3 strong, h4 strong{
 font-weight:500!important;
 line-height:1!important;
-font-size:2em!important;
+font-size:var(--mega-font-size)!important;
 letter-spacing:-.028em!important;}
 h4 strong{line-height:1.45!important;}
 
