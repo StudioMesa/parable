@@ -684,6 +684,7 @@ button[type="submit"]:after {
   }
 }
 .sqs-gallery-design-autogrid {
+  /*Remove Carousel Arrows*/
   /*Remove Carousel Heading*/
   /*Carousel Buttons*/
   /*Summary Item*/
@@ -698,6 +699,10 @@ button[type="submit"]:after {
   /*Summary Excerpt*/
   /*Mobile Adjustments*/
   /*Carousel Arrows Wrap*/
+}
+.sqs-gallery-design-autogrid .sqs-gallery-controls .previous,
+.sqs-gallery-design-autogrid .sqs-gallery-controls .next {
+  display: none!important;
 }
 .sqs-gallery-design-autogrid .summary-heading {
   display: none!important;
