@@ -14,7 +14,7 @@ jobs:
         name: Check out the repository
         with:
           fetch-depth: 0
-          token: ${{ secrets.PARABLE }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -34,7 +34,7 @@ jobs:
           git add styles.css
           git diff --staged --quiet || git commit -m "Compile LESS to CSS"
           if [ $? -eq 0 ]; then
-            git push https://github.com/StudioMesa/parable.git HEAD:main
+            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/StudioMesa/parable.git HEAD:main
           else
             echo "No changes to commit."
           fi
