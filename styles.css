@@ -45,7 +45,7 @@ h3 {
 H3 strong em {
   font-style: normal;
   font-size: 1.15em !important;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.02em;
   font-feature-settings: var(--inter-features);
   font-family: var(--inter), var(--body), sans-serif;
 }
