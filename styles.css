@@ -69,6 +69,7 @@ ul[data-rte-list] li span:after {
   content: var(--list-icon);
   position: absolute;
   left: -18px;
+  top: 0;
   color: inherit!important;
 }
 /*Small Paragraph Bold*/
