@@ -1,4 +1,4 @@
-/*Parable CSS — Updated 4/5/2024*/
+/*Parable CSS — Updated 4/21/2024*/
 /*Borders*/
 html {
   --c-border: 1px solid currentColor;
@@ -310,6 +310,11 @@ button[type="submit"]:after {
   align-items: center;
   justify-content: center;
 }
+/*Primary on Bright Inverse*/
+[data-section-theme="bright-inverse"] .sqs-button-element--primary:hover {
+  color: unset!important;
+  opacity: 0.7 !important;
+}
 /*Secondary Main*/
 .sqs-button-element--secondary {
   background: transparent!important;
@@ -371,29 +376,29 @@ button[type="submit"]:after {
   transition: var(--trans);
 }
 /*Accordion BLACK*/
-.black .accordion-item,
-.black-bold .accordion-item {
+[data-section-theme="black"] .accordion-item,
+[data-section-theme="black-bold"] .accordion-item {
   border: 1px solid var(--dark-bold);
 }
-.black .accordion-item:hover,
-.black-bold .accordion-item:hover {
+[data-section-theme="black"] .accordion-item:hover,
+[data-section-theme="black-bold"] .accordion-item:hover {
   border: 1px solid var(--light-bold);
 }
-.black .accordion-item__title-wrapper,
-.black-bold .accordion-item__title-wrapper {
+[data-section-theme="black"] .accordion-item__title-wrapper,
+[data-section-theme="black-bold"] .accordion-item__title-wrapper {
   background-color: var(--dark-bold) !important;
 }
-.black .accordion-item__description,
-.black-bold .accordion-item__description {
+[data-section-theme="black"] .accordion-item__description,
+[data-section-theme="black-bold"] .accordion-item__description {
   background: var(--dark-bold);
 }
-.black .accordion-icon-container,
-.black-bold .accordion-icon-container {
+[data-section-theme="black"] .accordion-icon-container,
+[data-section-theme="black-bold"] .accordion-icon-container {
   background: var(--accent-bold);
 }
 /*Accordion DARK*/
-.dark .accordion-item h2,
-.dark .accordion-item p {
+[data-section-theme="dark"] .accordion-item h2,
+[data-section-theme="dark"] .accordion-item p {
   color: var(--dark) !important;
 }
 /*Accordion Title Wrapper*/
@@ -1359,143 +1364,143 @@ button[type="submit"]:after {
   }
 }
 /*Newsletter Field Styles BLACK*/
-.black,
-.black-bold {
+[data-section-theme="black"],
+[data-section-theme="black-bold"] {
   /*Newsletter Button BLACK*/
 }
-.black .sqs-block-newsletter .newsletter-form-field-element,
-.black-bold .sqs-block-newsletter .newsletter-form-field-element {
+[data-section-theme="black"] .sqs-block-newsletter .newsletter-form-field-element,
+[data-section-theme="black-bold"] .sqs-block-newsletter .newsletter-form-field-element {
   background: var(--dark-bold);
   color: var(--white) !important;
 }
-.black .sqs-block-newsletter .newsletter-form-field-element:focus,
-.black-bold .sqs-block-newsletter .newsletter-form-field-element:focus {
+[data-section-theme="black"] .sqs-block-newsletter .newsletter-form-field-element:focus,
+[data-section-theme="black-bold"] .sqs-block-newsletter .newsletter-form-field-element:focus {
   outline: var(--a-border) !important;
 }
-.black .sqs-block-newsletter .newsletter-form-field-element::placeholder,
-.black-bold .sqs-block-newsletter .newsletter-form-field-element::placeholder {
+[data-section-theme="black"] .sqs-block-newsletter .newsletter-form-field-element::placeholder,
+[data-section-theme="black-bold"] .sqs-block-newsletter .newsletter-form-field-element::placeholder {
   color: var(--light) !important;
   opacity: 0.5;
 }
-.black .newsletter-block .newsletter-form-button,
-.black-bold .newsletter-block .newsletter-form-button {
+[data-section-theme="black"] .newsletter-block .newsletter-form-button,
+[data-section-theme="black-bold"] .newsletter-block .newsletter-form-button {
   background: var(--accent) !important;
 }
-.black .newsletter-block .newsletter-form-button:hover,
-.black-bold .newsletter-block .newsletter-form-button:hover {
+[data-section-theme="black"] .newsletter-block .newsletter-form-button:hover,
+[data-section-theme="black-bold"] .newsletter-block .newsletter-form-button:hover {
   background: var(--accent-bold) !important;
   color: var(--light) !important;
 }
 /*Newsletter Field Styles DARK*/
-.dark,
-.dark-bold {
+[data-section-theme="dark"],
+[data-section-theme="dark-bold"] {
   /*Newsletter Button DARK*/
 }
-.dark .sqs-block-newsletter .newsletter-form-field-element,
-.dark-bold .sqs-block-newsletter .newsletter-form-field-element {
+[data-section-theme="dark"] .sqs-block-newsletter .newsletter-form-field-element,
+[data-section-theme="dark-bold"] .sqs-block-newsletter .newsletter-form-field-element {
   background: var(--black);
   border: var(--b-border) !important;
   color: var(--white) !important;
 }
-.dark .sqs-block-newsletter .newsletter-form-field-element:focus,
-.dark-bold .sqs-block-newsletter .newsletter-form-field-element:focus {
+[data-section-theme="dark"] .sqs-block-newsletter .newsletter-form-field-element:focus,
+[data-section-theme="dark-bold"] .sqs-block-newsletter .newsletter-form-field-element:focus {
   outline: var(--a-border) !important;
 }
-.dark .sqs-block-newsletter .newsletter-form-field-element::placeholder,
-.dark-bold .sqs-block-newsletter .newsletter-form-field-element::placeholder {
+[data-section-theme="dark"] .sqs-block-newsletter .newsletter-form-field-element::placeholder,
+[data-section-theme="dark-bold"] .sqs-block-newsletter .newsletter-form-field-element::placeholder {
   color: var(--light) !important;
   opacity: 0.5;
 }
-.dark .newsletter-block .newsletter-form-button,
-.dark-bold .newsletter-block .newsletter-form-button {
+[data-section-theme="dark"] .newsletter-block .newsletter-form-button,
+[data-section-theme="dark-bold"] .newsletter-block .newsletter-form-button {
   background: var(--accent) !important;
 }
-.dark .newsletter-block .newsletter-form-button:hover,
-.dark-bold .newsletter-block .newsletter-form-button:hover {
+[data-section-theme="dark"] .newsletter-block .newsletter-form-button:hover,
+[data-section-theme="dark-bold"] .newsletter-block .newsletter-form-button:hover {
   background: var(--accent-bold) !important;
   color: var(--light) !important;
 }
 /*Newsletter Field Styles ACCENT*/
-.bright,
-.bright-inverse {
+[data-section-theme="bright"],
+[data-section-theme="bright-inverse"] {
   /*Newsletter Button ACCENT*/
 }
-.bright .sqs-block-newsletter .newsletter-form-field-element,
-.bright-inverse .sqs-block-newsletter .newsletter-form-field-element {
+[data-section-theme="bright"] .sqs-block-newsletter .newsletter-form-field-element,
+[data-section-theme="bright-inverse"] .sqs-block-newsletter .newsletter-form-field-element {
   background: var(--light);
   color: var(--black) !important;
 }
-.bright .sqs-block-newsletter .newsletter-form-field-element:focus,
-.bright-inverse .sqs-block-newsletter .newsletter-form-field-element:focus {
+[data-section-theme="bright"] .sqs-block-newsletter .newsletter-form-field-element:focus,
+[data-section-theme="bright-inverse"] .sqs-block-newsletter .newsletter-form-field-element:focus {
   outline: var(--d-border) !important;
 }
-.bright .sqs-block-newsletter .newsletter-form-field-element::placeholder,
-.bright-inverse .sqs-block-newsletter .newsletter-form-field-element::placeholder {
+[data-section-theme="bright"] .sqs-block-newsletter .newsletter-form-field-element::placeholder,
+[data-section-theme="bright-inverse"] .sqs-block-newsletter .newsletter-form-field-element::placeholder {
   color: var(--dark) !important;
   opacity: 0.4;
 }
-.bright .newsletter-block .newsletter-form-button,
-.bright-inverse .newsletter-block .newsletter-form-button {
+[data-section-theme="bright"] .newsletter-block .newsletter-form-button,
+[data-section-theme="bright-inverse"] .newsletter-block .newsletter-form-button {
   color: var(--accent) !important;
   background: var(--dark) !important;
 }
-.bright .newsletter-block .newsletter-form-button:hover,
-.bright-inverse .newsletter-block .newsletter-form-button:hover {
+[data-section-theme="bright"] .newsletter-block .newsletter-form-button:hover,
+[data-section-theme="bright-inverse"] .newsletter-block .newsletter-form-button:hover {
   background: var(--black) !important;
 }
 /*Newsletter Field Styles WHITE*/
-.white,
-.white-bold {
+[data-section-theme="white"],
+[data-section-theme="white-bold"] {
   /*Newsletter Button WHITE*/
 }
-.white .sqs-block-newsletter .newsletter-form-field-element,
-.white-bold .sqs-block-newsletter .newsletter-form-field-element {
+[data-section-theme="white"] .sqs-block-newsletter .newsletter-form-field-element,
+[data-section-theme="white-bold"] .sqs-block-newsletter .newsletter-form-field-element {
   background: var(--light);
   color: var(--black) !important;
 }
-.white .sqs-block-newsletter .newsletter-form-field-element:focus,
-.white-bold .sqs-block-newsletter .newsletter-form-field-element:focus {
+[data-section-theme="white"] .sqs-block-newsletter .newsletter-form-field-element:focus,
+[data-section-theme="white-bold"] .sqs-block-newsletter .newsletter-form-field-element:focus {
   outline: var(--a-border) !important;
 }
-.white .sqs-block-newsletter .newsletter-form-field-element::placeholder,
-.white-bold .sqs-block-newsletter .newsletter-form-field-element::placeholder {
+[data-section-theme="white"] .sqs-block-newsletter .newsletter-form-field-element::placeholder,
+[data-section-theme="white-bold"] .sqs-block-newsletter .newsletter-form-field-element::placeholder {
   color: var(--dark) !important;
   opacity: 0.5;
 }
-.white .newsletter-block .newsletter-form-button,
-.white-bold .newsletter-block .newsletter-form-button {
+[data-section-theme="white"] .newsletter-block .newsletter-form-button,
+[data-section-theme="white-bold"] .newsletter-block .newsletter-form-button {
   background: var(--accent) !important;
 }
-.white .newsletter-block .newsletter-form-button:hover,
-.white-bold .newsletter-block .newsletter-form-button:hover {
+[data-section-theme="white"] .newsletter-block .newsletter-form-button:hover,
+[data-section-theme="white-bold"] .newsletter-block .newsletter-form-button:hover {
   background: var(--black) !important;
   color: var(--light) !important;
 }
 /*Newsletter Field Styles LIGHT*/
-.light,
-.light-bold {
+[data-section-theme="light"],
+[data-section-theme="light-bold"] {
   /*Newsletter Button LIGHT*/
 }
-.light .sqs-block-newsletter .newsletter-form-field-element,
-.light-bold .sqs-block-newsletter .newsletter-form-field-element {
+[data-section-theme="light"] .sqs-block-newsletter .newsletter-form-field-element,
+[data-section-theme="light-bold"] .sqs-block-newsletter .newsletter-form-field-element {
   background: var(--white);
   color: var(--black) !important;
 }
-.light .sqs-block-newsletter .newsletter-form-field-element:focus,
-.light-bold .sqs-block-newsletter .newsletter-form-field-element:focus {
+[data-section-theme="light"] .sqs-block-newsletter .newsletter-form-field-element:focus,
+[data-section-theme="light-bold"] .sqs-block-newsletter .newsletter-form-field-element:focus {
   outline: var(--a-border) !important;
 }
-.light .sqs-block-newsletter .newsletter-form-field-element::placeholder,
-.light-bold .sqs-block-newsletter .newsletter-form-field-element::placeholder {
+[data-section-theme="light"] .sqs-block-newsletter .newsletter-form-field-element::placeholder,
+[data-section-theme="light-bold"] .sqs-block-newsletter .newsletter-form-field-element::placeholder {
   color: var(--dark) !important;
   opacity: 0.5;
 }
-.light .newsletter-block .newsletter-form-button,
-.light-bold .newsletter-block .newsletter-form-button {
+[data-section-theme="light"] .newsletter-block .newsletter-form-button,
+[data-section-theme="light-bold"] .newsletter-block .newsletter-form-button {
   background: var(--accent) !important;
 }
-.light .newsletter-block .newsletter-form-button:hover,
-.light-bold .newsletter-block .newsletter-form-button:hover {
+[data-section-theme="light"] .newsletter-block .newsletter-form-button:hover,
+[data-section-theme="light-bold"] .newsletter-block .newsletter-form-button:hover {
   background: var(--black) !important;
   color: var(--light) !important;
 }
