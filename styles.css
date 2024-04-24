@@ -34,8 +34,8 @@ h3 strong {
 .sqsrte-small,
 p,
 .sqsrte-large {
-  font-feature-settings: var(--inter-features);
-  font-family: var(--inter), var(--body), sans-serif;
+  font-feature-settings: var(--inter-features) !important;
+  font-family: var(--inter), var(--body), sans-serif !important;
 }
 /*H3 Margin*/
 h3 {
