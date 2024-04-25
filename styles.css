@@ -1,4 +1,4 @@
-/*Parable CSS — Updated 4/21/2024*/
+/*Parable CSS — Updated 4/24/2024*/
 /*Borders*/
 html {
   --c-border: 1px solid currentColor;
@@ -817,7 +817,7 @@ button[type="submit"]:after {
   margin-right: auto!important;
   /*Remove Block Padding*/
 }
-.summary-block-setting-design-list .sqs-block-summary-v2 .summary-block-setting-design-list .summary-item {
+.summary-block-setting-design-list .summary-item {
   padding-bottom: 0!important;
   margin-bottom: 0!important;
   margin-top: -20px !important;
