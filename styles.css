@@ -429,7 +429,7 @@ button[type="submit"]:after {
   top: unset !important;
 }
 /*Logo Gallery Centering*/
-.sqs-gallery-block-grid .slide .margin-wrapper .image-slide-anchor {
+body:not(.instagram-block).sqs-gallery-block-grid .slide .margin-wrapper .image-slide-anchor {
   display: flex!important;
   align-items: center;
   justify-content: center!important;
@@ -437,15 +437,15 @@ button[type="submit"]:after {
   padding-bottom: 0px!important;
 }
 /*Logo Gallery Max Size*/
-.sqs-gallery-block-grid .thumb-image.loaded {
+body:not(.instagram-block).sqs-gallery-block-grid .thumb-image.loaded {
   transform: scale(0.7) !important;
   top: unset!important;
 }
 /*Logo Gallery Add Margin*/
-.sqs-gallery-block-grid .slide .margin-wrapper {
+body:not(.instagram-block).sqs-gallery-block-grid .slide .margin-wrapper {
   margin-top: 20px;
 }
-.sqs-gallery-block-grid .sqs-gallery-design-grid-slide .margin-wrapper {
+body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide .margin-wrapper {
   margin-bottom: 20px!important;
 }
 .tweak-blog-item-width-narrow {
