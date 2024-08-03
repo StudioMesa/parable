@@ -160,10 +160,34 @@ padding-right:0!important;}
 
 
 //---FOLDER NAV---//
+/*Folder Title*/
+.header-nav-folder-title{
+position:relative!important;
+padding-right:14px!important;}
+
+/*Folder Title Chevron*/
+.header-nav-folder-title:after{
+font-family: var(--inter), var(--body), sans-serif!important;
+z-index:-1!important;
+position:absolute!important;
+right:0!important;
+content:"⌵"!important;
+transform:rotateZ(0deg);
+line-height:.7!important;
+font-weight:500!important;
+transition:var(--trans)!important;}
+
+/*Flip Chevron When Open*/
+.header-nav-item--folder:hover{
+.header-nav-folder-title:after{
+transform:rotateZ(180deg);
+margin-top:6px;
+transition:var(--trans)!important;}}
+
 /*Folder*/
 .header .header-nav .header-nav-item--folder .header-nav-folder-content {
 margin-left:13px;
-border-radius:10px;
+border-radius:6px;
 background:var(--white);
 padding:0px;
 min-width:unset;
@@ -179,7 +203,7 @@ transition:var(--trans)!important;}
 /*Folder Item Link*/
 .header-nav .header-nav-item--folder .header-nav-folder-content .header-nav-folder-item a{
 display:flex;
-padding:6px 10px!important;
+padding:8px 12px!important;
 align-items:center!important;
 justify-content:flex-start;
 border-radius:0px;
@@ -197,6 +221,7 @@ text-decoration-line:none;}
 
 /*Remove Flex Underline*/
 .tweak-global-animations-animation-type-flex .header-nav-folder-item a::after{height:0!important;}
+
 
 
 
