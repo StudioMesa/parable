@@ -1177,9 +1177,8 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
 .sqs-block-form textarea,
 .sqs-block-form radio,
 .sqs-block-form checkbox,
-.sqs-block-form .caption-text,
-.sqs-block-form ::placeholder {
-  font-family: var(--inter) !important;
+.sqs-block-form .caption-text {
+  font-family: var(--inter), var(--body), sans-serif !important;
   font-feature-settings: var(--inter-features);
   transition: var(--trans) !important;
   outline-offset: 3px!important;
@@ -1190,9 +1189,12 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
 .sqs-block-form textarea:focus,
 .sqs-block-form radio:focus,
 .sqs-block-form checkbox:focus,
-.sqs-block-form .caption-text:focus,
-.sqs-block-form ::placeholder:focus {
+.sqs-block-form .caption-text:focus {
   outline: 1px solid var(--tweak-form-block-stroke-color);
+}
+.sqs-block-form ::placeholder {
+  font-family: var(--inter), var(--body), sans-serif !important;
+  font-feature-settings: var(--inter-features);
 }
 /*Replace "reqired" with "*" */
 .form-wrapper .field-list .description.required {
