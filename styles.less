@@ -1193,19 +1193,32 @@ justify-content:center!important;}}
 
 
 //---EVENTS GRID---//
+/*Remove minimum height*/
+.tweak-events-stacked-height-medium .events{
+min-height:unset!important;}
+
 /*Event Grid*/
 .eventlist{
 display:grid!important;
+column-gap:50px!important;
+row-gap:80px!important;
 grid-template-columns:1fr 1fr 1fr;
 @media screen and (max-width:1000px){
 grid-template-columns:1fr 1fr;}
 @media screen and (max-width:767px){
 grid-template-columns:1fr;}
-gap:20px!important;}
+gap:30px!important;}
 
 /*Event Grid Container*/
 .events{
-padding-bottom:0!important;}
+padding-top:var(--sqs-mobile-site-gutter)!important;
+padding-bottom:var(--sqs-mobile-site-gutter)!important;}
+
+/*Event Card Title*/
+.eventlist-title{
+font-size:24px!important;
+letter-spacing:-.015em;
+margin-bottom:-20px!important;}
 
 /*Event Grid Item*/
 .eventlist-event{
@@ -1221,7 +1234,7 @@ gap:0px;}}
 /*Event Info*/
 .eventlist-column-info{
 padding:20px!important;
-min-height:270px!important;
+min-height:190px!important;
 background: var(--secondary-color)!important;
 width:100%!important;
 font-weight:var(--body-weight)!important;
@@ -1232,17 +1245,16 @@ margin-top:0!important;}
 
 /*Truncate event description*/
 .eventlist-description p, .eventlist-excerpt{
+font-size:.85rem!important;
+margin-bottom:0px;
 display: -webkit-box;
 overflow: hidden;
 -webkit-line-clamp: 3;
 -webkit-box-orient: vertical;}
 
-/*Event Meta*/
-.eventlist-meta{
-margin-bottom:10px;}
-
 /*Event Button*/
 .eventlist-button.sqs-button-element--primary{
+display:none!important;
 margin-top:20px;
 font-weight:var(--body-weight)!important;
 font-feature-settings:
@@ -1283,6 +1295,32 @@ font-family: var(--inter), var(--body), sans-serif!important;}
 .eventlist-column-info{
 width:45%;
 padding-left:70px;}}
+
+/*Events Categories*/
+.eventlist-cats{
+font-size:0px;
+display:flex!important;
+margin-bottom:15px;
+gap:2px;
+& a{
+pointer-events: none!important;
+cursor: default!important;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family: var(--inter), var(--body), sans-serif!important;
+border-radius:4px!important;
+background:var(--accent-color);
+border:none;
+height:20px;
+padding:2px 7px!important;
+text-transform:uppercase!important;
+font-style:normal;
+letter-spacing:.07em!important;
+font-size:10px!important;
+font-weight:var(--bold-weight)!important;
+transition:var(--trans);
+color:var(--white)!important;}}
 
 
 //--EVENT PAGE---//
