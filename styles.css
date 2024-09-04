@@ -1384,6 +1384,7 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
 .eventlist-title {
   font-size: 24px!important;
   letter-spacing: -0.015em;
+  margin-bottom: 0px!important;
 }
 /*Event Grid Item*/
 .eventlist-event {
@@ -1409,6 +1410,10 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   font-feature-settings: var(--inter-features) !important;
   font-family: var(--inter), var(--body), sans-serif !important;
   margin-top: 0!important;
+}
+/*Event Meta*/
+.eventlist-meta.event-meta {
+  margin-bottom: 0px!important;
 }
 /*Truncate event description*/
 .eventlist-description p,
