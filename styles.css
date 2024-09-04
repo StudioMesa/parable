@@ -1411,10 +1411,6 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   font-family: var(--inter), var(--body), sans-serif !important;
   margin-top: 0!important;
 }
-/*Event Meta*/
-.eventlist-meta.event-meta {
-  margin-bottom: 0px!important;
-}
 /*Truncate event description*/
 .eventlist-description p,
 .eventlist-excerpt {
