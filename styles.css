@@ -291,7 +291,6 @@ button[type="submit"] {
 .header-menu .header-menu-cta a:after,
 .newsletter-form .newsletter-form-button:after,
 button[type="submit"]:after {
-  display: flex!important;
   content: "→";
   font-family: var(--inter);
   font-weight: 400;
