@@ -946,7 +946,7 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   font-size: 25px;
   line-height: 1.55em;
 }
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 767px) {
   .sqs-gallery-design-carousel .summary-excerpt p:first-of-type {
     font-size: 20px;
     line-height: 1.4em;
