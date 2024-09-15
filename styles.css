@@ -1,4 +1,4 @@
-/*Parable CSS — Updated 9/01/2024*/
+/*Parable CSS — Updated 09/15/2024*/
 /*Site Background Color*/
 body {
   background-color: var(--body-background) !important;
@@ -269,6 +269,11 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   font-family: var(--heading);
   font-weight: 500;
   letter-spacing: -0.02em;
+}
+/*Match main nav to folder*/
+.header-menu-nav-wrapper {
+  display: flex!important;
+  flex-direction: column!important;
 }
 /*Core Button Structure*/
 .sqs-block-button-element--small,
@@ -733,6 +738,11 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
 .sqs-gallery-design-autogrid .summary-item .summary-content {
   padding: 20px 30px;
 }
+@media screen and (max-width: 767px) {
+  .sqs-gallery-design-autogrid .summary-item .summary-content {
+    padding: var(--sqs-mobile-site-gutter);
+  }
+}
 .sqs-gallery-design-autogrid .summary-metadata-item {
   font-family: var(--inter) !important;
   font-feature-settings: var(--inter-features);
@@ -767,6 +777,11 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   font-size: 24px;
   line-height: 1.3;
   letter-spacing: -0.03em;
+}
+@media screen and (max-width: 767px) {
+  .sqs-gallery-design-autogrid .summary-title a {
+    font-size: 22px;
+  }
 }
 .sqs-gallery-design-autogrid .summary-excerpt p {
   font-weight: var(--body-weight) !important;
@@ -876,7 +891,12 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   text-transform: uppercase;
   text-align: right;
   opacity: 1!important;
-  font-weight: 500;
+  font-weight: var(--bold-weight);
+}
+@media screen and (max-width: 767px) {
+  .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item {
+    font-size: 0.55em !important;
+  }
 }
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item--cats,
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item.summary-metadata-item--date,
@@ -889,7 +909,6 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   text-transform: uppercase!important;
   font-style: normal;
   letter-spacing: 0.07em !important;
-  font-size: 8px!important;
 }
 .summary-block-setting-design-list .sqs-gallery-design-list .summary-metadata-item--tags {
   color: var(--dark) !important;
@@ -1388,6 +1407,10 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   letter-spacing: -0.015em;
   margin-bottom: 0px!important;
 }
+/*Event Meta*/
+.eventlist-meta {
+  margin-bottom: 0px!important;
+}
 /*Event Grid Item*/
 .eventlist-event {
   border-radius: var(--global-radius) !important;
@@ -1412,6 +1435,11 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   font-feature-settings: var(--inter-features) !important;
   font-family: var(--inter), var(--body), sans-serif !important;
   margin-top: 0!important;
+}
+@media screen and (max-width: 767px) {
+  .eventlist-column-info {
+    padding: var(--sqs-mobile-site-gutter) !important;
+  }
 }
 /*Truncate event description*/
 .eventlist-description p,
