@@ -1,4 +1,4 @@
-/*Parable CSS — Updated 09/15/2024*/
+/*Parable CSS — Updated 09/18/2024*/
 /*Site Background Color*/
 body {
   background-color: var(--body-background) !important;
@@ -267,13 +267,69 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
 /*Mobile Nav Menu Item*/
 .header-menu-nav-item a {
   font-family: var(--heading);
-  font-weight: 500;
+  font-size: var(--mobile-nav-size);
+  letter-spacing: -0.015em;
+  margin: 0px;
+  font-weight: var(--mobile-nav-weight) !important;
   letter-spacing: -0.02em;
 }
-/*Match main nav to folder*/
+/*Mobile Nav Wraper*/
 .header-menu-nav-wrapper {
+  position: static!important;
+  display: flex;
+  flex-direction: column;
+  gap: var(--mobile-nav-gap);
+}
+/*Match main nav to folder*/
+.header-menu-nav-folder-content {
   display: flex!important;
   flex-direction: column!important;
+  gap: var(--mobile-nav-gap);
+  padding: var(--sqs-mobile-site-gutter);
+}
+/*Mobile Nav Content*/
+.header-menu-nav-folder-content {
+  position: relative!important;
+  justify-content: center!important;
+}
+/*Mobile Nav Menu Item*/
+.header-menu-nav-item {
+  padding: unset;
+  width: fit-content !important;
+}
+.header-menu-nav-item a {
+  width: fit-content !important;
+}
+/*Add Margin to "Back" Mobile*/
+.header-menu-controls-control--active {
+  margin-bottom: 20px!important;
+}
+/*Mobile Menu Button*/
+.header-menu-cta a {
+  font-weight: var(--mobile-nav-weight) !important;
+  font-family: var(--inter), var(--body), sans-serif !important;
+  font-feature-settings: var(--inter-features);
+  font-size: 1rem!important;
+  padding: 14px!important;
+  border: 1px solid var(--menuOverlayButtonBackgroundColor) !important;
+}
+.tweak-global-animations-animation-type-flex .header-menu-cta a:before {
+  border: none!important;
+  border-radius: unset!important;
+}
+/*Mobile Nav Chevron*/
+.chevron {
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  height: 8px!important;
+  width: 8px!important;
+}
+.chevron.chevron--right {
+  margin-left: 4px;
+}
+.chevron.chevron--left {
+  margin-right: 4px;
+  margin-left: -6px;
 }
 /*Core Button Structure*/
 .sqs-block-button-element--small,
@@ -554,7 +610,10 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   cursor: default!important;
 }
 .tweak-blog-item-width-narrow .blog-item-wrapper .author-name {
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+  font-family: var(--inter), var(--body), sans-serif !important;
+  font-feature-settings: var(--inter-features);
+  font-weight: var(--body-weight);
   font-size: 16px!important;
   line-height: 1.3;
   display: flex;
@@ -736,7 +795,7 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   }
 }
 .sqs-gallery-design-autogrid .summary-item .summary-content {
-  padding: 20px 30px;
+  padding: 30px;
 }
 @media screen and (max-width: 767px) {
   .sqs-gallery-design-autogrid .summary-item .summary-content {
@@ -1280,6 +1339,7 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
 }
 .blog-basic-grid {
   /*Blog Title*/
+  /*Blog Item Card*/
   /*Link Out Arrow*/
   /*Primary Meta*/
   /*Meta Section*/
@@ -1295,8 +1355,16 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
 }
 @media screen and (max-width: 767px) {
   .blog-basic-grid .blog-title {
-    font-size: 22px!important;
+    font-size: 20px!important;
     letter-spacing: -0.015em !important;
+  }
+}
+.blog-basic-grid .blog-basic-grid--text {
+  padding: 30px!important;
+}
+@media screen and (max-width: 767px) {
+  .blog-basic-grid .blog-basic-grid--text {
+    padding: var(--sqs-mobile-site-gutter) !important;
   }
 }
 .blog-basic-grid .passthrough-link:after {
@@ -1309,7 +1377,7 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   border-radius: 4px!important;
   background: var(--tweak-text-block-stroke-color);
   border: none;
-  padding: 5px 8px;
+  padding: 8px;
   text-transform: uppercase!important;
   letter-spacing: 0.07em !important;
   font-size: 9px!important;
@@ -1317,6 +1385,7 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   transition: var(--trans);
 }
 .blog-basic-grid .blog-meta-section {
+  margin-bottom: 1rem;
   align-items: center!important;
 }
 .blog-basic-grid .blog-meta-primary .blog-categories-list {
@@ -1332,6 +1401,10 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   line-height: 1.5 !important;
   font-size: 13px!important;
   letter-spacing: 0.01em !important;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .blog-basic-grid .blog-date {
   font-family: var(--inter) !important;
@@ -1347,13 +1420,16 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
 .blog-basic-grid .blog-basic-grid--container {
   border-radius: var(--global-radius);
   overflow: hidden;
+  min-height: unset!important;
   transition: var(--trans) !important;
 }
 .blog-basic-grid .blog-basic-grid--container .entry .blog-item .is-loaded {
   display: flex;
 }
-.blog-basic-grid .blog-basic-grid--text {
-  padding: 30px!important;
+@media screen and (max-width: 767px) {
+  .blog-basic-grid .blog-basic-grid--text {
+    padding: var(--sqs-mobile-site-gutter) !important;
+  }
 }
 .blog-basic-grid .blog-article-spacer {
   display: none;
@@ -1625,9 +1701,9 @@ section.vertical-alignment--top .content-wrapper {
   .tweak-portfolio-grid-basic-height-custom .portfolio-grid-basic,
   .tweak-products-width-inset .products.collection-content-wrapper,
   .tweak-events-stacked-height-medium .events {
-    padding-left: 3vw!important;
-    padding-right: 3vw!important;
-    margin: 3vw auto!important;
+    padding-left: var(--sqs-site-gutter) !important;
+    padding-right: var(--sqs-site-gutter) !important;
+    margin: var(--sqs-site-gutter) auto !important;
   }
 }
 /*Inset Sections Mobile + Tab*/
@@ -1636,8 +1712,8 @@ section.vertical-alignment--top .content-wrapper {
   .tweak-portfolio-grid-basic-height-custom .portfolio-grid-basic,
   .tweak-products-width-inset .products.collection-content-wrapper,
   .tweak-events-stacked-height-medium .events {
-    padding-left: 6vw!important;
-    padding-right: 6vw!important;
-    margin: 6vw auto!important;
+    padding-left: var(--sqs-mobile-site-gutter) !important;
+    padding-right: var(--sqs-mobile-site-gutter) !important;
+    margin: var(--sqs-mobile-site-gutter) auto !important;
   }
 }
