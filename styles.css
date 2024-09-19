@@ -1483,10 +1483,6 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   letter-spacing: -0.015em;
   margin-bottom: 0px!important;
 }
-/*Event Meta*/
-.eventlist-meta {
-  margin-bottom: 0px!important;
-}
 /*Event Grid Item*/
 .eventlist-event {
   border-radius: var(--global-radius) !important;
