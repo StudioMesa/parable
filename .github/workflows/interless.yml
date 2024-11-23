@@ -20,11 +20,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Ensure Node.js version is 16 or higher
+          node-version: '16'
 
       - name: Install Dependencies
         run: |
-          npm install -g less stylelint postcss-less
+          npm install -g less stylelint stylelint-less postcss-less stylelint-config-standard
 
       - name: Configure Git
         run: |
@@ -39,7 +39,7 @@ jobs:
 
       - name: Lint LESS files
         run: |
-          stylelint "interless.less" --custom-syntax postcss-less
+          stylelint "interless.less"
 
       - name: Compile LESS to CSS
         run: lessc interless.less interless.css
@@ -51,7 +51,7 @@ jobs:
           git add interless.css
           if ! git diff --cached --quiet; then
             git commit -m "Compile interless.less to interless.css"
-            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
+            git push https://x-access-token:${{ GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
           else
             echo "No changes to commit."
           fi
