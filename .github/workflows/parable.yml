@@ -20,11 +20,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Update Node.js version to 16
+          node-version: '16'  # Ensure Node.js version is 16 or higher
 
       - name: Install Dependencies
         run: |
-          npm install -g less stylelint stylelint-less
+          npm install -g less stylelint postcss-less
 
       - name: Configure Git
         run: |
@@ -39,7 +39,7 @@ jobs:
 
       - name: Lint LESS files
         run: |
-          stylelint "styles.less" --syntax less
+          stylelint "styles.less" --custom-syntax postcss-less
 
       - name: Compile LESS to CSS
         run: lessc styles.less styles.css
@@ -51,7 +51,7 @@ jobs:
           git add styles.css
           if ! git diff --cached --quiet; then
             git commit -m "Compile styles.less to styles.css"
-            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
+            git push https://x-access-token:${{ GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
           else
             echo "No changes to commit."
           fi
