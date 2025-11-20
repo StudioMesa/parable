@@ -1,4 +1,4 @@
-/*Parable CSS — Updated 04/10/2025*/
+/*Parable CSS — Updated 11/20/2025*/
 /*Site Background Color*/
 body {
   background-color: var(--body-background) !important;
@@ -193,6 +193,15 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
 /*Remove Right Padding from Burger*/
 .header-burger-btn.burger {
   padding-right: 0!important;
+}
+/*Remove nav item default padding*/
+.header .header-nav-wrapper a,
+.header .language-item a {
+  padding: unset!important;
+}
+/*Remove folder right padding*/
+.header-nav-folder-title {
+  padding-right: unset!important;
 }
 /*Folder Title*/
 .header-nav-folder-title {
