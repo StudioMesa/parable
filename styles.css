@@ -199,14 +199,9 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
 .header .language-item a {
   padding: unset!important;
 }
-/*Remove folder right padding*/
-.header-nav-folder-title {
-  padding-right: unset!important;
-}
 /*Folder Title*/
 .header-nav-folder-title {
   position: relative!important;
-  padding-right: 14px!important;
 }
 /*Folder Icon Transition*/
 .header-nav-item--folder .header-dropdown-flip svg,
