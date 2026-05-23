@@ -1,4 +1,4 @@
-/*Parable CSS — Updated 11/20/2025*/
+/*Parable CSS — Updated 05/22/2026*/
 /*Site Background Color*/
 body {
   background-color: var(--body-background) !important;
@@ -644,7 +644,6 @@ body:not(.instagram-block).sqs-gallery-block-grid .sqs-gallery-design-grid-slide
   display: none;
 }
 .tweak-blog-item-width-narrow blockquote {
-  border: unset!important;
   margin: 3rem 0;
   padding: 25px 40px;
   overflow: hidden!important;
