@@ -1,4 +1,4 @@
-/*Parable CSS — Updated 05/22/2026*/
+/*Parable CSS — Updated 08/20/2026*/
 /*Site Background Color*/
 body {
   background-color: var(--body-background) !important;
@@ -1030,12 +1030,12 @@ body .sqs-block-summary-v2 .summary-block-setting-design-list .summary-item {
 .sqs-gallery-design-carousel .summary-excerpt p:first-of-type {
   font-family: var(--heading) !important;
   letter-spacing: -0.025em;
-  font-size: 25px;
+  font-size: 25px!important;
   line-height: 1.55em;
 }
 @media screen and (max-width: 767px) {
   .sqs-gallery-design-carousel .summary-excerpt p:first-of-type {
-    font-size: 20px;
+    font-size: 20px!important;
     line-height: 1.4em;
   }
 }
